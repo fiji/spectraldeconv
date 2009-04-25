@@ -1,0 +1,14 @@
+requires("1.37e");
+pathToBlurredImage = "D:/Research/Images/head/head_blur.tif";
+pathToPsf = "D:/Research/Images/head/head_psf.tif";
+pathToDeblurredImage = "D:/Research/Images/head/head_deblurred_gtik_ref.tif";
+method = "GTIK_REFLEXIVE"; //available options: GTIK_REFLEXIVE, GTIK_PERIODIC, TIK_REFLEXIVE, TIK_PERIODIC, TSVD_REFLEXIVE, TSVD_PERIODIC
+stencil = "LAPLACIAN"; //only used if method = "GTIK_REFLEXIVE" or method = "GTIK_PERIODIC"; available options: IDENTITY, FIRST_DERIVATIVE_SLICES, SECOND_DERIVATIVE_SLICES, FIRST_DERIVATIVE_ROWS, SECOND_DERIVATIVE_ROWS, FIRST_DERIVATIVE_COLUMNS, SECOND_DERIVATIVE_COLUMNS, LAPLACIAN
+resizing = "NONE"; // available options: NONE, NEXT_POWER_OF_TWO
+output = "SAME_AS_SOURCE"; // available options: SAME_AS_SOURCE, BYTE, SHORT, FLOAT
+precision = "SINGLE"; //available options: SINGLE, DOUBLE
+threshold = "0"; //-1, then disabled
+regParam = "-1"; //if -1, then GCV is used to compute regParam
+nOfThreads = "2";
+showPadded = "false";
+call("edu.emory.mathcs.restoretools.spectral.ParallelSpectralDeconvolution3D.deconvolve", pathToBlurredImage, pathToPsf, pathToDeblurredImage, method, stencil, resizing, output, precision, threshold, regParam, nOfThreads, showPadded);
