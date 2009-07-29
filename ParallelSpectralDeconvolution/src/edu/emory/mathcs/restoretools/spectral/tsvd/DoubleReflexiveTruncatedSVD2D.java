@@ -155,7 +155,7 @@ public class DoubleReflexiveTruncatedSVD2D extends AbstractDoubleSpectralDeconvo
         int[] indices = DoubleSorting.quickSort.sortIndex(s, compDec);
         s = s.viewSelection(indices);
         bhat = bhat.viewSelection(indices);
-        int n = s.size();
+        int n = (int)s.size();
         double[] rho = new double[n - 1];
         rho[n - 2] = bhat.getQuick(n - 1) * bhat.getQuick(n - 1);
         DoubleMatrix1D G = new DenseDoubleMatrix1D(n - 1);

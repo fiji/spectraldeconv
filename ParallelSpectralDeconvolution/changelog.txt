@@ -1,5 +1,8 @@
 Parallel Spectral Deconvolution changelog
 
+1.10:	July 29, 2009
+	- The plugin is updated to use Parallel Colt 0.8.2.
+
 1.9:	April 11, 2009
 	- Added SpectralDeconvolver interfaces and abstract classes for 2D and 3D spectral algorithms.
 	- Default stencil for Generalized Tikhonov changed from Identity to Laplacian.

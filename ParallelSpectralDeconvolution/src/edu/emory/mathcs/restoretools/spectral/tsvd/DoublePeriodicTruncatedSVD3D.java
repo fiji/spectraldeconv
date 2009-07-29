@@ -153,7 +153,7 @@ public class DoublePeriodicTruncatedSVD3D extends AbstractDoubleSpectralDeconvol
         int[] indices = DoubleSorting.quickSort.sortIndex((DoubleMatrix1D) s, compDec);
         s = ((DoubleMatrix1D) s).viewSelection(indices);
         bhat = ((DoubleMatrix1D) bhat).viewSelection(indices);
-        int n = s.size();
+        int n = (int)s.size();
         double[] rho = new double[n - 1];
         rho[n - 2] = ((DoubleMatrix1D) bhat).getQuick(n - 1) * ((DoubleMatrix1D) bhat).getQuick(n - 1);
         DoubleMatrix1D G = new DenseDoubleMatrix1D(n - 1);

@@ -1,5 +1,5 @@
 <project basedir="." default="build" name="parallel_spectral_deconvolution">
-	<property name="version" value="1.9" />
+	<property name="version" value="1.10" />
 
 	<property name="compiler" value="javac1.5" />
 
@@ -73,7 +73,7 @@
 		<mkdir dir="${doc.dest}" />
 		<javadoc sourcepath="${javac.src}" destdir="${doc.dest}" public="true" author="true" use="true" splitIndex="true" version="true" doctitle="&lt;h2&gt;Parallel Spectral Deconvolution 2D and 3D&lt;/h2&gt;&lt;h4&gt;Multithreaded deblurring in Java&lt;/h4&gt;&lt;hr&gt;" windowtitle="Parallel Spectral Deconvolution ${version} - API Specification" header="&lt;b&gt;Parallel Spectral Deconvolution ${version}&lt;/b&gt;">
 			<packageset dir="${javac.src}" />
-			<link href="http://java.sun.com/j2se/1.5/docs/api/" />
+			<link href="http://java.sun.com/javase/6/docs/api/" />
 			<link href="http://mathcs.emory.edu/~pwendyk/research/parallelcolt/doc/" />
 			<link href="http://rsbweb.nih.gov/ij/developer/api/" />
 			<classpath refid="javac.classpath" />

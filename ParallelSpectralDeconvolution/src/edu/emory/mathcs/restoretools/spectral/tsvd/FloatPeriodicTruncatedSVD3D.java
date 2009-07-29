@@ -153,7 +153,7 @@ public class FloatPeriodicTruncatedSVD3D extends AbstractFloatSpectralDeconvolve
         int[] indices = FloatSorting.quickSort.sortIndex((FloatMatrix1D) s, compDec);
         s = ((FloatMatrix1D) s).viewSelection(indices);
         bhat = ((FloatMatrix1D) bhat).viewSelection(indices);
-        int n = s.size();
+        int n = (int)s.size();
         float[] rho = new float[n - 1];
         rho[n - 2] = ((FloatMatrix1D) bhat).getQuick(n - 1) * ((FloatMatrix1D) bhat).getQuick(n - 1);
         FloatMatrix1D G = new DenseFloatMatrix1D(n - 1);

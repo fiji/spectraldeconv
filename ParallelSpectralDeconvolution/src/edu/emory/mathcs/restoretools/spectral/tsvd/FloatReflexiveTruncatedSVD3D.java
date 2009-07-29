@@ -155,7 +155,7 @@ public class FloatReflexiveTruncatedSVD3D extends AbstractFloatSpectralDeconvolv
         int[] indices = FloatSorting.quickSort.sortIndex(s, compDec);
         s = s.viewSelection(indices);
         bhat = bhat.viewSelection(indices);
-        int n = s.size();
+        int n = (int)s.size();
         float[] rho = new float[n - 1];
         rho[n - 2] = bhat.getQuick(n - 1) * bhat.getQuick(n - 1);
         FloatMatrix1D G = new DenseFloatMatrix1D(n - 1);

@@ -281,7 +281,7 @@ public class ParallelSpectralDeconvolution2D implements PlugIn, ImageListener {
         return pathToDeblurredImage;
     }
 
-    private final static String version = "1.9";
+    private final static String version = "1.10";
 
     private final String[] methodNames = { "Generalized Tikhonov (reflexive)", "Generalized Tikhonov (periodic)", "Tikhonov (reflexive)", "Tikhonov (periodic)", "Truncated SVD (reflexive)", "Truncated SVD (periodic)" };
 
@@ -452,7 +452,6 @@ public class ParallelSpectralDeconvolution2D implements PlugIn, ImageListener {
 
         public MainPanel(String name) {
             super(name);
-            ConcurrencyUtils.setUseJCublas(false);
             windowIDs = WindowManager.getIDList();
             if (windowIDs != null) {
                 imageTitles = new String[windowIDs.length];
