@@ -190,10 +190,10 @@ public abstract class AbstractDoubleSpectralDeconvolver2D implements DoubleSpect
         if (isPadded) {
             switch (padding) {
             case PERIODIC:
-                B = DoubleCommon2D.padPeriodic((DoubleMatrix2D) B, bColumnsPad, bRowsPad);
+                B = DoubleCommon2D.padPeriodic((DoubleMatrix2D) B, bRowsPad, bColumnsPad);
                 break;
             case REFLEXIVE:
-                B = DoubleCommon2D.padReflexive((DoubleMatrix2D) B, bColumnsPad, bRowsPad);
+                B = DoubleCommon2D.padReflexive((DoubleMatrix2D) B, bRowsPad, bColumnsPad);
                 break;
             default:
                 throw new IllegalArgumentException("Unsupported padding type.");
@@ -207,7 +207,7 @@ public abstract class AbstractDoubleSpectralDeconvolver2D implements DoubleSpect
         psfCenter = new int[] { (int) maxAndLoc[1], (int) maxAndLoc[2] };
         ((DoubleMatrix2D) PSF).normalize();
         if ((kCols != bColumnsPad) || (kRows != bRowsPad)) {
-            PSF = DoubleCommon2D.padZero(((DoubleMatrix2D) PSF), bColumnsPad, bRowsPad);
+            PSF = DoubleCommon2D.padZero(((DoubleMatrix2D) PSF), bRowsPad, bColumnsPad);
         }
         psfCenter[0] += (bRowsPad - kRows + 1) / 2;
         psfCenter[1] += (bColumnsPad - kCols + 1) / 2;

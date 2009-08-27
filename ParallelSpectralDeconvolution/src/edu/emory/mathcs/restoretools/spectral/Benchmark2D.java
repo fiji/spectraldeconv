@@ -113,7 +113,7 @@ public class Benchmark2D {
 
             tsvd = null;
             imX = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -155,7 +155,7 @@ public class Benchmark2D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -197,7 +197,7 @@ public class Benchmark2D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -239,7 +239,7 @@ public class Benchmark2D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -281,7 +281,7 @@ public class Benchmark2D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -323,7 +323,7 @@ public class Benchmark2D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -365,7 +365,7 @@ public class Benchmark2D {
 
             tsvd = null;
             imX = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -407,7 +407,7 @@ public class Benchmark2D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -449,7 +449,7 @@ public class Benchmark2D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -491,7 +491,7 @@ public class Benchmark2D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -533,7 +533,7 @@ public class Benchmark2D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -575,7 +575,7 @@ public class Benchmark2D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -613,102 +613,102 @@ public class Benchmark2D {
     public static void main(String[] args) {
 
         //		benchmarkDoubleTSVD_Periodic_2D(1);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTSVD_Periodic_2D(2);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTSVD_Periodic_2D(4);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTSVD_Periodic_2D(8);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTSVD_Reflexive_2D(1);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTSVD_Reflexive_2D(2);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTSVD_Reflexive_2D(4);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTSVD_Reflexive_2D(8);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTikhonov_Periodic_2D(1);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTikhonov_Periodic_2D(2);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTikhonov_Periodic_2D(4);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTikhonov_Periodic_2D(8);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTikhonov_Reflexive_2D(1);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTikhonov_Reflexive_2D(2);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTikhonov_Reflexive_2D(4);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTikhonov_Reflexive_2D(8);
-        //		System.gc();
+        //		
         //		benchmarkDoubleGTikhonov_Periodic_2D(1);
-        //		System.gc();
+        //		
         //		benchmarkDoubleGTikhonov_Periodic_2D(2);
-        //		System.gc();
+        //		
         //		benchmarkDoubleGTikhonov_Periodic_2D(4);
-        //		System.gc();
+        //		
         //		benchmarkDoubleGTikhonov_Periodic_2D(8);
-        //		System.gc();
+        //		
         //		benchmarkDoubleGTikhonov_Reflexive_2D(1);
-        //		System.gc();
+        //		
         //		benchmarkDoubleGTikhonov_Reflexive_2D(2);
-        //		System.gc();
+        //		
         //		benchmarkDoubleGTikhonov_Reflexive_2D(4);
-        //		System.gc();
+        //		
         //		benchmarkDoubleGTikhonov_Reflexive_2D(8);
-        //		System.gc();
+        //		
 
 //        benchmarkFloatTSVD_Periodic_2D(1);
-//        System.gc();
+//        
 //        benchmarkFloatTSVD_Periodic_2D(2);
-//        System.gc();
+//        
 //        benchmarkFloatTSVD_Periodic_2D(4);
-//        System.gc();
+//        
 //        benchmarkFloatTSVD_Periodic_2D(8);
-//        System.gc();
+//        
         benchmarkFloatTSVD_Reflexive_2D(1);
-        System.gc();
+        
         benchmarkFloatTSVD_Reflexive_2D(2);
-        System.gc();
+        
         benchmarkFloatTSVD_Reflexive_2D(4);
-        System.gc();
+        
         benchmarkFloatTSVD_Reflexive_2D(8);
-        System.gc();
+        
 //        benchmarkFloatTikhonov_Periodic_2D(1);
-//        System.gc();
+//        
 //        benchmarkFloatTikhonov_Periodic_2D(2);
-//        System.gc();
+//        
 //        benchmarkFloatTikhonov_Periodic_2D(4);
-//        System.gc();
+//        
 //        benchmarkFloatTikhonov_Periodic_2D(8);
-//        System.gc();
+//        
         benchmarkFloatTikhonov_Reflexive_2D(1);
-        System.gc();
+        
         benchmarkFloatTikhonov_Reflexive_2D(2);
-        System.gc();
+        
         benchmarkFloatTikhonov_Reflexive_2D(4);
-        System.gc();
+        
         benchmarkFloatTikhonov_Reflexive_2D(8);
-        System.gc();
+        
 //        benchmarkFloatGTikhonov_Periodic_2D(1);
-//        System.gc();
+//        
 //        benchmarkFloatGTikhonov_Periodic_2D(2);
-//        System.gc();
+//        
 //        benchmarkFloatGTikhonov_Periodic_2D(4);
-//        System.gc();
+//        
 //        benchmarkFloatGTikhonov_Periodic_2D(8);
-//        System.gc();
+//        
         benchmarkFloatGTikhonov_Reflexive_2D(1);
-        System.gc();
+        
         benchmarkFloatGTikhonov_Reflexive_2D(2);
-        System.gc();
+        
         benchmarkFloatGTikhonov_Reflexive_2D(4);
-        System.gc();
+        
         benchmarkFloatGTikhonov_Reflexive_2D(8);
-        System.gc();
+        
         System.exit(0);
 
     }

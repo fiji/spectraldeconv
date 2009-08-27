@@ -188,10 +188,10 @@ public abstract class AbstractFloatSpectralDeconvolver2D implements FloatSpectra
         if (isPadded) {
             switch (padding) {
             case PERIODIC:
-                B = FloatCommon2D.padPeriodic((FloatMatrix2D) B, bColumnsPad, bRowsPad);
+                B = FloatCommon2D.padPeriodic((FloatMatrix2D) B, bRowsPad, bColumnsPad);
                 break;
             case REFLEXIVE:
-                B = FloatCommon2D.padReflexive((FloatMatrix2D) B, bColumnsPad, bRowsPad);
+                B = FloatCommon2D.padReflexive((FloatMatrix2D) B, bRowsPad, bColumnsPad);
                 break;
             default:
                 throw new IllegalArgumentException("Unsupported padding type.");
@@ -204,7 +204,7 @@ public abstract class AbstractFloatSpectralDeconvolver2D implements FloatSpectra
         psfCenter = new int[] { (int) maxAndLoc[1], (int) maxAndLoc[2] };
         ((FloatMatrix2D) PSF).normalize();
         if ((kCols != bColumnsPad) || (kRows != bRowsPad)) {
-            PSF = FloatCommon2D.padZero(((FloatMatrix2D) PSF), bColumnsPad, bRowsPad);
+            PSF = FloatCommon2D.padZero(((FloatMatrix2D) PSF), bRowsPad, bColumnsPad);
         }
         psfCenter[0] += (bRowsPad - kRows + 1) / 2;
         psfCenter[1] += (bColumnsPad - kCols + 1) / 2;

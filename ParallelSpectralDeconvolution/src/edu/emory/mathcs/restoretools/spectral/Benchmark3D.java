@@ -113,7 +113,7 @@ public class Benchmark3D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         System.out.println("Average execution time (deblur()): " + String.format(format, av_time_deblur / 1000000000.0 / (double) NITER) + " sec");
         System.out.println("Average execution time (deblur(regParam)): " + String.format(format, av_time_deblur_regParam / 1000000000.0 / (double) NITER) + " sec");
@@ -152,7 +152,7 @@ public class Benchmark3D {
             av_time_update = av_time_update + elapsedTime_update;
 
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -194,7 +194,7 @@ public class Benchmark3D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -236,7 +236,7 @@ public class Benchmark3D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -278,7 +278,7 @@ public class Benchmark3D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -320,7 +320,7 @@ public class Benchmark3D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -362,7 +362,7 @@ public class Benchmark3D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         System.out.println("Average execution time (deblur()): " + String.format(format, av_time_deblur / 1000000000.0 / (double) NITER) + " sec");
         System.out.println("Average execution time (deblur(regParam)): " + String.format(format, av_time_deblur_regParam / 1000000000.0 / (double) NITER) + " sec");
@@ -401,7 +401,7 @@ public class Benchmark3D {
             av_time_update = av_time_update + elapsedTime_update;
 
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -443,7 +443,7 @@ public class Benchmark3D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -485,7 +485,7 @@ public class Benchmark3D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -527,7 +527,7 @@ public class Benchmark3D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -569,7 +569,7 @@ public class Benchmark3D {
 
             imX = null;
             tsvd = null;
-            System.gc();
+            
         }
         blurImage = null;
         psfImage = null;
@@ -606,102 +606,102 @@ public class Benchmark3D {
 
     public static void main(String[] args) {
         //		benchmarkDoubleTSVD_Periodic_3D(1);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTSVD_Periodic_3D(2);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTSVD_Periodic_3D(4);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTSVD_Periodic_3D(8);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTSVD_Reflexive_3D(1);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTSVD_Reflexive_3D(2);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTSVD_Reflexive_3D(4);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTSVD_Reflexive_3D(8);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTikhonov_Periodic_3D(1);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTikhonov_Periodic_3D(2);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTikhonov_Periodic_3D(4);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTikhonov_Periodic_3D(8);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTikhonov_Reflexive_3D(1);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTikhonov_Reflexive_3D(2);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTikhonov_Reflexive_3D(4);
-        //		System.gc();
+        //		
         //		benchmarkDoubleTikhonov_Reflexive_3D(8);
-        //		System.gc();
+        //		
         //		benchmarkDoubleGTikhonov_Periodic_3D(1);
-        //		System.gc();
+        //		
         //		benchmarkDoubleGTikhonov_Periodic_3D(2);
-        //		System.gc();
+        //		
         //		benchmarkDoubleGTikhonov_Periodic_3D(4);
-        //		System.gc();
+        //		
         //		benchmarkDoubleGTikhonov_Periodic_3D(8);
-        //		System.gc();
+        //		
         //		benchmarkDoubleGTikhonov_Reflexive_3D(1);
-        //		System.gc();
+        //		
         //		benchmarkDoubleGTikhonov_Reflexive_3D(2);
-        //		System.gc();
+        //		
         //		benchmarkDoubleGTikhonov_Reflexive_3D(4);
-        //		System.gc();
+        //		
         //		benchmarkDoubleGTikhonov_Reflexive_3D(8);
-        //		System.gc();
+        //		
 
 //        benchmarkFloatTSVD_Periodic_3D(1);
-//        System.gc();
+//        
 //        benchmarkFloatTSVD_Periodic_3D(2);
-//        System.gc();
+//        
 //        benchmarkFloatTSVD_Periodic_3D(4);
-//        System.gc();
+//        
 //        benchmarkFloatTSVD_Periodic_3D(8);
-//        System.gc();
+//        
         benchmarkFloatTSVD_Reflexive_3D(1);
-        System.gc();
+        
         benchmarkFloatTSVD_Reflexive_3D(2);
-        System.gc();
+        
         benchmarkFloatTSVD_Reflexive_3D(4);
-        System.gc();
+        
         benchmarkFloatTSVD_Reflexive_3D(8);
-        System.gc();
+        
 //        benchmarkFloatTikhonov_Periodic_3D(1);
-//        System.gc();
+//        
 //        benchmarkFloatTikhonov_Periodic_3D(2);
-//        System.gc();
+//        
 //        benchmarkFloatTikhonov_Periodic_3D(4);
-//        System.gc();
+//        
 //        benchmarkFloatTikhonov_Periodic_3D(8);
-//        System.gc();
+//        
         benchmarkFloatTikhonov_Reflexive_3D(1);
-        System.gc();
+        
         benchmarkFloatTikhonov_Reflexive_3D(2);
-        System.gc();
+        
         benchmarkFloatTikhonov_Reflexive_3D(4);
-        System.gc();
+        
         benchmarkFloatTikhonov_Reflexive_3D(8);
-        System.gc();
+        
 //        benchmarkFloatGTikhonov_Periodic_3D(1);
-//        System.gc();
+//        
 //        benchmarkFloatGTikhonov_Periodic_3D(2);
-//        System.gc();
+//        
 //        benchmarkFloatGTikhonov_Periodic_3D(4);
-//        System.gc();
+//        
 //        benchmarkFloatGTikhonov_Periodic_3D(8);
-//        System.gc();
+//        
         benchmarkFloatGTikhonov_Reflexive_3D(1);
-        System.gc();
+        
         benchmarkFloatGTikhonov_Reflexive_3D(2);
-        System.gc();
+        
         benchmarkFloatGTikhonov_Reflexive_3D(4);
-        System.gc();
+        
         benchmarkFloatGTikhonov_Reflexive_3D(8);
-        System.gc();
+        
 
         System.exit(0);
 

@@ -281,7 +281,7 @@ public class ParallelSpectralDeconvolution2D implements PlugIn, ImageListener {
         return pathToDeblurredImage;
     }
 
-    private final static String version = "1.10";
+    private final static String version = "1.11";
 
     private final String[] methodNames = { "Generalized Tikhonov (reflexive)", "Generalized Tikhonov (periodic)", "Tikhonov (reflexive)", "Tikhonov (periodic)", "Truncated SVD (reflexive)", "Truncated SVD (periodic)" };
 
@@ -414,7 +414,7 @@ public class ParallelSpectralDeconvolution2D implements PlugIn, ImageListener {
         ftik_fft = null;
         ftsvd_dct = null;
         ftsvd_fft = null;
-        System.gc();
+        
     }
 
     private void cleanAll() {
@@ -424,7 +424,7 @@ public class ParallelSpectralDeconvolution2D implements PlugIn, ImageListener {
         imX = null;
         windowIDs = null;
         imageTitles = null;
-        System.gc();
+        
     }
 
     private class DefaultExceptionHandler implements Thread.UncaughtExceptionHandler {
@@ -1097,6 +1097,7 @@ public class ParallelSpectralDeconvolution2D implements PlugIn, ImageListener {
                 mainPanel.dispose();
                 ImagePlus.removeImageListener(getImageListener());
                 cleanAll();
+                ConcurrencyUtils.shutdown();
             }
         }
 
@@ -1164,8 +1165,8 @@ public class ParallelSpectralDeconvolution2D implements PlugIn, ImageListener {
     public static void main(String args[]) {
 
         new ImageJ();
-        IJ.open("D:\\Research\\Images\\satellite-blur.png");
-        IJ.open("D:\\Research\\Images\\satellite-psf.png");
+        IJ.open("D:\\Research\\Images\\grain-blur-cr-new.png");
+        IJ.open("D:\\Research\\Images\\grain-psf-cr-new.png");
         IJ.runPlugIn("edu.emory.mathcs.restoretools.spectral.ParallelSpectralDeconvolution2D", null);
     }
 }

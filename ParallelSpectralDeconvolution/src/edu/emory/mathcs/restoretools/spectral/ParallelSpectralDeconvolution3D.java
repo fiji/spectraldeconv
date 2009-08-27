@@ -282,7 +282,7 @@ public class ParallelSpectralDeconvolution3D implements PlugIn, ImageListener {
         return pathToDeblurredImage;
     }
 
-    private final static String version = "1.10";
+    private final static String version = "1.11";
 
     private final String[] methodNames = { "Generalized Tikhonov (reflexive)", "Generalized Tikhonov (periodic)", "Tikhonov (reflexive)", "Tikhonov (periodic)", "Truncated SVD (reflexive)", "Truncated SVD (periodic)" };
 
@@ -415,7 +415,7 @@ public class ParallelSpectralDeconvolution3D implements PlugIn, ImageListener {
         ftik_fft = null;
         ftsvd_dct = null;
         ftsvd_fft = null;
-        System.gc();
+        
     }
 
     private void cleanAll() {
@@ -425,7 +425,7 @@ public class ParallelSpectralDeconvolution3D implements PlugIn, ImageListener {
         imX = null;
         windowIDs = null;
         imageTitles = null;
-        System.gc();
+        
     }
 
     private class DefaultExceptionHandler implements Thread.UncaughtExceptionHandler {
@@ -1100,6 +1100,7 @@ public class ParallelSpectralDeconvolution3D implements PlugIn, ImageListener {
                 mainPanel.dispose();
                 ImagePlus.removeImageListener(getImageListener());
                 cleanAll();
+                ConcurrencyUtils.shutdown();
             }
         }
 

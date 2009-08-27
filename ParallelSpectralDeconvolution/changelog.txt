@@ -1,5 +1,10 @@
 Parallel Spectral Deconvolution changelog
 
+1.11:	August 27, 2009
+	- Fixed bug causing IllegalArgumentException when the blurred 2D image was not a square.
+	- Fixed bug causing incorrect results for single precision 2D algorithms.
+	- The plugin is updated to use Parallel Colt 0.9. 
+
 1.10:	July 29, 2009
 	- The plugin is updated to use Parallel Colt 0.8.2.
 
